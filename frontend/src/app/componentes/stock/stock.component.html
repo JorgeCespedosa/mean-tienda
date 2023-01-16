@@ -1,0 +1,27 @@
+
+ <app-navigation></app-navigation> 
+ <app-categorias (category)="filtrar($event)"></app-categorias>
+ <br>
+ <app-carritocompra [carrito]="items"></app-carritocompra>
+ <br>
+
+
+  <tr *ngFor="let i of productosmostrados">
+   
+    <div class="card" style="width: 17rem; margin-left: 30%; ">
+      <img src="assets/{{ i.foto}}" class="card-img-top" alt="..." style="width: 14rem; height: 14rem; margin: auto;">
+      <div class="card-body">
+        <h5 class="card-title">{{i.nombre}}</h5>
+        <p class="card-text">{{i.descripcion}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Categoria: {{i.categoria}}</li>
+        
+        
+        <li class="list-group-item">Precio: {{i.precio}} &euro; </li>
+      </ul>
+      <div class="card-body" style="margin: auto;">
+        <a class="btn btn-danger" (click)="addCar(i)">Añadir al carrito</a>
+      </div>
+    </div>
+    </tr>

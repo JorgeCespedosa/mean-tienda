@@ -1,0 +1,31 @@
+###
+GET http://localhost:4000/api
+
+
+###
+POST http://localhost:4000/api
+Content-Type: application/json
+
+{
+    "foto":"guantillas.jpg",
+    "nombre":"qqqqgyhjgf",
+    "descripcion":"Peto peto peto peto peto peto peto peto peto",
+    "categoria":"Masculino",
+    "precio": 78
+}
+
+###
+GET http://localhost:4000/api/636af32a70c30676391ede9d
+
+
+
+###
+DELETE http://localhost:4000/api/636af32a70c30676391ede9d
+
+###
+PUT http://localhost:4000/api/636b7a9c19debe8a81bca8b2
+Content-Type: application/json
+
+{
+    "descripcion":"Chandal largo"
+}

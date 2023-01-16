@@ -1,0 +1,22 @@
+<div class="container" style="float: right; ">
+    <div class="row">
+        <main id="items" class="col-sm-8 row"></main>
+        <!-- Carrito -->
+        <aside class="col-sm-4">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group" *ngFor="let i of carrito">
+                    <li>Nombre: {{i.nombre}} &nbsp; Precio: {{i.precio}} &nbsp; 
+                      Cantidad: {{i.cantidad}}
+                      <button id="boton-vaciar" class="btn btn-dangers" (click)="eliminar(i._id)" >Vaciar</button>
+                    </li>
+                    
+            </ul>
+            <hr>
+            
+            <p class="text-right">Total:  <span id="total" >{{preciototal}}</span>&euro; </p>
+            <button id="boton-sumar" class="btn btn-danger" (click)="sumar()">Total</button> &nbsp;  
+            &nbsp;  <button id="boton-pagar" class="btn btn-danger" (click)="addCarrito()">Pagar</button>
+        </aside>
+    </div>
+</div>

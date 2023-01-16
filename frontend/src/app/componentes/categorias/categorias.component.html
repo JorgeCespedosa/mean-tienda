@@ -1,0 +1,73 @@
+
+<!-- <a class="dropdown-trigger btn" data-target="dropdown1">Categorias</a>
+
+
+<ul id="dropdown1" class="dropdown-content">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" (click)="send('Masculino')" >Masculino</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="send('Femenino')" >Femenino</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" (click)="send('Protección')" >Protecciones</a>
+  </li>
+</ul>
+<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul> -->
+<!-- <div class="dropdown">
+    <button>Categorias</button>
+    <a class="nav-link" aria-current="page" (click)="send('Masculino')" >Masculino</a>
+        <a class="nav-link" (click)="send('Femenino')" >Femenino</a>
+        <a class="nav-link" (click)="send('Protección')" >Protecciones</a>
+  </div>  -->
+
+  <!-- <header class="header">
+    <h1 class="logo">
+      <a href="#" style="color: black;">Categorias</a>
+    </h1>
+    <div class="nav-wrap">
+      <nav class="main-nav" role="navigation">
+        <ul class="unstyled list-hover-slide">
+          <li><a  class="nav-link" aria-current="page" (click)="send('Masculino')" >Masculino</a></li>
+          <li> <a class="nav-link" (click)="send('Femenino')" >Femenino</a></li>
+          <li><a class="nav-link" (click)="send('Protección')" >Protecciones</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+
+  <!-- MEJORAR ESTO DEJARLO COMO ANTES  -->
+  <div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav bg-dark text-white">
+            <li class="sidebar-brand">
+                <p href="#">
+                    CATEGORIAS
+                </p>
+            </li>
+            <li>
+              <a  class="nav-link" aria-current="page" (click)="enviarCategoria('Masculino')">Masculino</a>
+            </li>
+            <li>
+              <a class="nav-link" (click)="enviarCategoria('Femenino')" >Femenino</a>
+            </li>
+            <li>
+              <a class="nav-link" (click)="enviarCategoria('Protección')" >Protecciones</a>
+                
+            </li>
+            
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+      <div class="container-fluid" >
+          <div class="row">
+              <div class="col-lg-12" >
+                  <router-outlet></router-outlet>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+</div> 
