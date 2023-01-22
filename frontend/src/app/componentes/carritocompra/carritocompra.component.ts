@@ -16,14 +16,13 @@ export class CarritocompraComponent implements OnInit {
   preciototal:number;
   car:Carrito = {
     idUsuario:'',
-    nombreProducto:[],
-    cantidad:[],
+    producto:[],
+    total:0,
     _id:'',
   };
 
   token:any
-  arrayNombres:any = [];
-  arrayCantidades:any = [];
+
   
 
   constructor(public productoService: ProductoService,public carritoService: CarritoService) {
@@ -73,15 +72,8 @@ getCarrito(){
   addCarrito(){
     this.token = localStorage.getItem('token');
     this.carritoService.carritoSeleccionado.idUsuario = this.token;
-    for (let index of this.carrito) {
-      this.carritoService.carritoSeleccionado.cantidad = index.cantidad;
-     this.arrayNombres.push(index.nombre);
-      this.carritoService.carritoSeleccionado.nombreProducto = this.arrayNombres;
-      this.arrayCantidades.push(index.cantidad);
-      this.carritoService.carritoSeleccionado.cantidad = this.arrayCantidades;
-
-      
-    }
+    this.carritoService.carritoSeleccionado.producto = this.carrito;
+    this.carritoService.carritoSeleccionado.total = this.preciototal;
     this.carritoService.postCarrito(this.carritoService.carritoSeleccionado).subscribe(
       res => {
         console.log(res);

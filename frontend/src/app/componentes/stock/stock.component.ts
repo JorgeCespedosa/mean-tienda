@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ProductoService } from 'src/app/servicios/producto.service';
 import { Producto } from 'src/app/models/producto';
 
@@ -21,12 +21,15 @@ export class StockComponent implements OnInit {
     this.productoService.getProductos().subscribe(
       res => {
         this.productoService.productos = res
+        //mostrar todos los productos de primeras
+        this.productosmostrados = this.productoService.productos;
       },
       err => console.error(err)
       
     )
   }
 
+  
   filtrar(categoria: string) {
     let productosmostrar: Object[] = [];
     for (let i of this.productoService.productos) {

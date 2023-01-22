@@ -10,24 +10,48 @@
 	<button type="submit">Login</button>
   </form> -->
 
-  <form class="custom-form" method="post" #usuarioForm="ngForm" (submit)="login(usuarioForm)">
+ <!-- <form class="custom-form" method="post" #usuarioForm="ngForm" (submit)="login(usuarioForm)">
+	<div class="container">
+
 	<h1>Login de usuario</h1>
-	<input
-	  type="email"
-	  [(ngModel)]="email"
-	  name="email"
-	  placeholder="Email"
-	  required="required"
-	/>
-	<input
-	  type="password"
-	  [(ngModel)]="password"
-	  name="password"
-	  placeholder="Password"
-	  required="required"
-	/>
+	<inputtype="email" [(ngModel)]="email" name="email placeholder="Email" required="required"/>
+	<input type="password" [(ngModel)]="password" name="password" placeholder="Password" required="required"/>
 	<button type="submit">Iniciar Sesion</button>
+	
 	<br>
 	<br>
 	<a class="nav-link" style="margin: auto; color: aliceblue;" href="/registro">Registrarse</a>
-</form>
+</div>
+</form>  -->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+		<div class="col-md-4 col-md-offset-4">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Login de usuario</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form" class="custom-form" method="post" #usuarioForm="ngForm" (submit)="login(usuarioForm)">
+                    <fieldset>
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="Email" name="email" type="email"  [(ngModel)]="email" required="required">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="password" type="password"  [(ngModel)]="password" required="required">
+			    		</div>
+			    		<div class="checkbox">
+			    	    	<a class="nav-link" href="/registro">Registrarse</a>
+			    	    </div>
+			    		<input class="btn btn-lg btn-success btn-block" style="background-color: rgb(44, 43, 43);" type="submit" value="Login">
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,7 +1,9 @@
+import { Producto } from "./producto"
+
 export interface Carrito{
     idUsuario:string
-    nombreProducto: []
-    cantidad: []
+    producto: Producto[]
+    total:number
     createdAt?: string
     updateAt?: string
     _id?: string

@@ -4,12 +4,12 @@ import { CarritocompraComponent } from './componentes/carritocompra/carritocompr
 import { LoginComponent } from './componentes/login/login.component';
 import { StockComponent } from './componentes/stock/stock.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
-import { ListadocomprasComponent } from './listadocompras/listadocompras.component';
+import { ListadocomprasComponent } from './componentes/listadocompras/listadocompras.component';
 
 export const appRoutes: Routes = [
     {
       path: '',
-      redirectTo: '/login',
+      redirectTo: '/stock',
       pathMatch: 'full',
     },
     {

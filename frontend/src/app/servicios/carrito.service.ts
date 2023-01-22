@@ -12,8 +12,8 @@ export class CarritoService {
 
   carritoSeleccionado:Carrito={
     idUsuario:'',
-    nombreProducto:[],
-    cantidad:[],
+    producto: [],
+    total:0
   };
 
   carritos: Carrito[];
@@ -28,5 +28,7 @@ export class CarritoService {
   postCarrito(carrito:Carrito){
     return this.http.post(this.URL_API,carrito);
   }
-
+  getCarrito(id:string){
+    return this.http.get<Carrito>(this.URL_API+`/${id}`);
+  }
 }

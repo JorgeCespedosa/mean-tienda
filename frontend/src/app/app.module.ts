@@ -14,7 +14,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { CategoriasComponent } from './componentes/categorias/categorias.component';
 import { StockComponent } from './componentes/stock/stock.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
-import { ListadocomprasComponent } from './listadocompras/listadocompras.component';
+import { ListadocomprasComponent } from './componentes/listadocompras/listadocompras.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
 

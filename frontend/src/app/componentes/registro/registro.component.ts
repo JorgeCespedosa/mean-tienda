@@ -11,12 +11,12 @@ import{Router} from '@angular/router';
 export class RegistroComponent implements OnInit {
   email:string;
   password:string;
-  confirmPassword:string;
+ 
 
   constructor(public usuarioService: UsuarioService,public router:Router) {
     this.email = '';
     this.password = '';
-    this.confirmPassword = '';
+    
    }
 
   ngOnInit(): void {

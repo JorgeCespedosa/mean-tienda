@@ -1,0 +1,46 @@
+
+<!-- <div class="col-md-8" style="margin: auto;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    IdUsuario
+                </th>
+                <th>
+                    Nombre del producto
+                </th>
+                <th>
+                    Cantidad comprada
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let i of this.carritoService.carritos">
+            <td> {{i.idUsuario}}</td>
+            <td *ngFor="let a of i.producto">{{a.nombre}} {{a.cantidad}} </td> 
+            
+
+           </tr>
+         
+        </tbody>
+    </table>
+
+
+  
+</div> -->
+<app-navigation></app-navigation>
+<div id="slideMorph" class="dropdown" *ngFor="let i of this.carritomostrado; let index=index" style="margin: auto;">
+ 
+    <p  class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <i class="glyphicon glyphicon-cog" style="color: #232323; font-weight: bold; font-size: x-large ">Número de pedido: {{index+1}} | Total: {{i.total}} €</i> <span class="caret"></span>
+    </p>
+  
+    <div class="dropdown-container dropdown-container-slidemorph" >
+      <ul class="dropdown-menu" >
+        <li class="dropdown-header">{{i.idUsuario}}</li>
+        <li *ngFor="let a of i.producto" style="font-weight: bold;">Producto: {{a.nombre}} | Cantidad: {{a.cantidad}}</li>
+        </ul>
+  
+    </div><!-- /dropdown-container -->
+  
+  </div><!-- /dropdown -->

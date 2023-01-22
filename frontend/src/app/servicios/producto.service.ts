@@ -10,6 +10,7 @@ export class ProductoService {
 
   URL_API = 'http://localhost:4000/api'
 
+  //El id puede fallar revisar tambien id de producto.ts lo he cambiado
   productoSeleccionado:Producto={
     foto:'',
     nombre:'',
@@ -17,8 +18,7 @@ export class ProductoService {
     categoria:'',
     precio:0,
     cantidad:1,
-    stock:10,
-    _id:''
+    stock:10
   };
 
   productos: Producto[];

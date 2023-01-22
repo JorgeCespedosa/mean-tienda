@@ -8,5 +8,5 @@ export interface Producto{
     stock:number
     createdAt?: string
     updateAt?: string
-    _id: string
+    _id?: string
 }
